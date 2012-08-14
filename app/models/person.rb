@@ -4,5 +4,5 @@ class Person < ActiveRecord::Base
   has_many	:works
   has_many	:work_companies, through: :works, source: :company
   belongs_to	:state
-  has_many	:contact_companies, class_name: "Company", foreign_key: "company_id"
+  has_many	:contact_companies, class_name: "Company", foreign_key: "person_id"
 end
