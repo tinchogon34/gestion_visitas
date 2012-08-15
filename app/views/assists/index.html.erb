@@ -1,0 +1,27 @@
+<h1>Listing assists</h1>
+
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Person</th>
+    <th>Present</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @assists.each do |assist| %>
+  <tr>
+    <td><%= assist.event_id %></td>
+    <td><%= assist.person_id %></td>
+    <td><%= assist.present %></td>
+    <td><%= link_to 'Show', assist %></td>
+    <td><%= link_to 'Edit', edit_assist_path(assist) %></td>
+    <td><%= link_to 'Destroy', assist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Assist', new_assist_path %>

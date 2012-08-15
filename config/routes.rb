@@ -1,4 +1,8 @@
 GestionVisitas::Application.routes.draw do
+  resources :assists
+
+  resources :events
+
   resources :companies
 
   resources :countries
