@@ -5,4 +5,6 @@ class Person < ActiveRecord::Base
   has_many	:work_companies, through: :works, source: :company
   belongs_to	:state
   has_many	:contact_companies, class_name: "Company", foreign_key: "person_id"
+
+validates_presence_of	:name, :lastname, :state
 end
