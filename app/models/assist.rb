@@ -4,7 +4,7 @@ class Assist < ActiveRecord::Base
   belongs_to  :event
   belongs_to  :person
 
-  validates_presence_of  :present, :event, :person
+  validates_presence_of  :event_id, :person_id
   validates_inclusion_of :present, :in => [true, false]
 
 end

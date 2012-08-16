@@ -8,5 +8,5 @@ class Person < ActiveRecord::Base
   has_many        :assists
   has_many        :events, through: :assists
 
-  validates_presence_of	:name, :lastname, :state
+  validates_presence_of	:name, :lastname, :state_id
 end
