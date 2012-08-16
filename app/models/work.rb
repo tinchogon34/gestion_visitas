@@ -3,5 +3,5 @@ class Work < ActiveRecord::Base
   belongs_to	  :company
   belongs_to	  :person
 
-  validates_presence_of	:company, :person
+  validates_presence_of	:company_id, :person_id
 end
